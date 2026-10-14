@@ -3,16 +3,75 @@
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Wall.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.22611448358133754 0.31314177693749834 0.9223960471788519 1.3283848264362996
-  position -0.5730926967330663 -1.9000436706193462 1.263845418629589
+  orientation -0.311977117021109 -0.002799740588338271 0.9500854908416586 3.158653791284741
+  position 3.483309405335861 -0.07673199179945779 2.877736870821685
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
+  floorSize 2 2
+}
+E-puck {
+}
+Wall {
+  translation -0.07 0 0
+  rotation 0 0 1 1.57
+  size 1 0.01 0.1
+}
+Wall {
+  translation -0.54 0 0
+  name "wall(1)"
+  size 0.93 0.01 0.1
+}
+Wall {
+  translation -0.5 0.82 0
+  name "wall(2)"
+  size 1 0.01 0.1
+}
+Wall {
+  translation -0.5 -0.82 0
+  name "wall(3)"
+  size 1 0.01 0.1
+}
+Wall {
+  translation 0.499928 -0.0904539 0
+  rotation 0 0 1 1.57
+  name "wall(4)"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation 0.4994 -0.750454 0
+  rotation 0 0 1 1.57
+  name "wall(5)"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation 0.500608 0.759546 0
+  rotation 0 0 1 1.57
+  name "wall(6)"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation 0.65 -0.08 0
+  name "wall(7)"
+  size 0.3 0.01 0.1
+}
+Wall {
+  translation 0.750216 0.269346 0
+  rotation 0 0 1 1.57
+  name "wall(8)"
+  size 0.7 0.01 0.1
+}
+Wall {
+  translation 0.81 0.75 0
+  name "wall(9)"
+  size 0.4 0.01 0.1
 }
