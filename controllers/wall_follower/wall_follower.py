@@ -41,19 +41,52 @@ def run_robot(robot):
     # - perform simulation steps until Webots is stopping the controller
     while robot.step(timestep) != -1:
         # Read the sensors:
+        for ind in range(8):
+            print("ind: {}, val: {}".format(ind, prox_sensors[ind].getValue()))
+        
         # Enter here functions to read sensor data, like:
         #  val = ds.getValue()
     
         # Process sensor data here.
-    
+        left_wall = prox_sensors[5].getValue() > 80
+        left_corner = prox_sensors[6].getValue() > 80
+        front_wall = prox_sensors[7].getValue() > 80
+        
+        left_speed = max_speed
+        right_speed = max_speed
+        
+        if front_wall:
+            print("Turn right in place")
+            left_speed = max_speed
+            right_speed = -max_speed            
+        else:
+            if left_wall:
+                print("Drive forward")          
+                left_speed = max_speed
+                right_speed = max_speed 
+            else:
+                print("Turn left")
+                left_speed = max_speed / 8
+                right_speed = max_speed
+            
+            
+            if left_corner:
+                print("Came too close, drive right")
+                left_speed = max_speed
+                right_speed = max_speed / 8                   
+        
+        
+            
         # Enter here functions to send actuator commands, like:
         #  motor.setPosition(10.0)
-        pass
+        
+        left_motor.setVelocity(left_speed)
+        right_motor.setVelocity(right_speed)
+
     
     # Enter here exit cleanup code.
 
 if __name__ == "__main__":
-    
     
     # create the Robot instance.
     robot = Robot()
